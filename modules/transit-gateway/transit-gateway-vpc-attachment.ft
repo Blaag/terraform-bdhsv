@@ -1,0 +1,18 @@
+variable subnet1 {
+}
+
+variable subnet2 {
+}
+
+variable tg-id {
+}
+
+variable vpc-id {
+}
+
+resource "aws_ec2_transit_gateway_vpc_attachment" "tg-attach" {
+  subnet_ids         = ["${var.subnet1}",
+                        "${var.subnet2}"]
+  transit_gateway_id = "${var.tg-id}"
+  vpc_id             = "${var.vpc-id}"
+}

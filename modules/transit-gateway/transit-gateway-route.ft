@@ -1,0 +1,5 @@
+resource "aws_ec2_transit_gateway_route" "tg-route" {
+  destination_cidr_block         = "${var.route-cidr}"
+  transit_gateway_attachment_id  = "${aws_ec2_transit_gateway_vpc_attachment.tg-attachment.id}"
+  transit_gateway_route_table_id = "${aws_ec2_transit_gateway.tg.association_default_route_table_id}"
+}
