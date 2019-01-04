@@ -1,9 +1,9 @@
 variable agency {
-  default = "cdot"
+  default = "notoit"
 }
 
 variable project {
-  default = "workbench"
+  default = "ssotest"
 }
 
 variable az1 {
